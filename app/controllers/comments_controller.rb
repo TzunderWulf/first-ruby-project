@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  http_basic_authenticate_with name: "TzunderWulf", password: "secret", 
+  only: [:destroy]
+
     def create
         # Find the article on which the comment should be placed
         @article = Article.find(params[:article_id])
