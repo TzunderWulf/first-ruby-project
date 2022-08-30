@@ -1,7 +1,8 @@
 class Article < ApplicationRecord
     include Visible
     
-    has_many :comments
+    # delete all related comments to post, when post is deleted
+    has_many :comments, dependent: :destroy
     
     validates :title, presence: true
     validates :body, presence: true, length: { minimum: 10 }
