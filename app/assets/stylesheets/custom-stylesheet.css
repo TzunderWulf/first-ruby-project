@@ -41,3 +41,8 @@ body {
 .nav-item:hover {
     text-decoration: underline;
 }
+.comment {
+    width: 90%;
+    margin: 20px auto;
+    border-bottom: 1px solid black;
+}
